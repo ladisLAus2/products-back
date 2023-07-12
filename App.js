@@ -6,7 +6,7 @@ const fs = require("fs");
 
 const app = express();
 const upload = multer({ dest: "uploads/" });
-app.use(cors);
+app.use(cors());
 const productSchema = new mongoose.Schema({
   name: { type: String, required: true },
   image: { type: String, required: true },
