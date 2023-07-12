@@ -1,11 +1,12 @@
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const multer = require("multer");
 const fs = require("fs");
 
 const app = express();
 const upload = multer({ dest: "uploads/" });
-
+app.use(cors);
 const productSchema = new mongoose.Schema({
   name: { type: String, required: true },
   image: { type: String, required: true },
